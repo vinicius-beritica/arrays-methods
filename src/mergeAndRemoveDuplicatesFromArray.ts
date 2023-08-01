@@ -14,5 +14,5 @@ export const mergeAndRemoveDuplicatesFromArray = <T>(
   leftArray: T[],
   rightArray: T[],
 ): T[] => {
-  return [];
+  return [...new Set([...leftArray, ...rightArray])];
 };
