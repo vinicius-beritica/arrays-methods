@@ -10,5 +10,5 @@ import { Ientrydata, PageItems } from '../types/Ientrydata';
  * @return {*}  {PageItems[]}
  */
 export const extractItemsPaginateArray = (data: Ientrydata): PageItems[] => {
-  return [];
+  return data.pages.reduce((ac, page) => ac.concat(page.items), []);
 };
