@@ -14,5 +14,17 @@
  * @return {string}
  */
 export const nameArrayToString = (nameArray: string[]) => {
-  return '';
+  const arrayString = nameArray;
+  let stringName = '';
+  if (arrayString.length < 2) {
+    stringName = arrayString[0].toString();
+    return stringName;
+  } else if (arrayString.length === 2) {
+    stringName = `${arrayString[0]} & ${arrayString[1]}`.toString();
+  } else {
+    stringName =
+      `${arrayString[0]}, ${arrayString[1]} & ${arrayString[2]}`.toString();
+  }
+
+  return stringName;
 };
